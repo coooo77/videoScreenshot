@@ -5,13 +5,15 @@
   "type": "module",
   "main": "./src/index.js",
   "scripts": {
-    "test": "npx tsc && node dist/index"
+    "test": "npx tsc && node dist/index",
+    "start": "node dist/index"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.9.0"
+    "@types/node": "^20.9.0",
+    "typescript": "^5.2.2"
   },
   "dependencies": {
     "join-images": "^1.1.5",
