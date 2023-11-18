@@ -27,7 +27,6 @@ export default {
 
   defaultConfig() {
     return {
-      exportPath: path.join(__dirname, '..', '..'),
       top: 5,
       left: 5,
       row: 3,

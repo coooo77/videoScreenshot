@@ -20,7 +20,7 @@ async function main() {
     } else {
       const { sourceDirs, ...config } = item
       handleSource = sourceDirs
-      handleConfig = { ...defaultConfig, ...config }
+      handleConfig = { ...config }
     }
 
     const systemDefaultConfig = helper.defaultConfig()
