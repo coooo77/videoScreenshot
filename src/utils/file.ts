@@ -1,6 +1,10 @@
+/* 外部方法 */
 import fs from 'fs'
 import path from 'path'
 import * as url from 'url'
+
+/* 型別 */
+import { Config } from '../types'
 
 const __dirname = url.fileURLToPath(new URL('.', import.meta.url))
 
@@ -14,7 +18,11 @@ export default {
     }
   },
 
-  getConfig() {
+  getConfig(): Config {
     return this.getJsonFile(path.join(__dirname, '../..'), 'config')
+  },
+
+  getTargetExtFile(sourceDir: string, exts: string[]) {
+    return fs.readdirSync(sourceDir).filter((i) => exts.includes(path.extname(i)))
   },
 }

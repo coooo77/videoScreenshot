@@ -1,0 +1,36 @@
+{
+  "list": [
+    "D:/path/to/videos",
+    {
+      "sourceDirs": [
+        "D:/path/to/videos"
+      ],
+      "row": 4,
+      "col": 3,
+      "top": 5,
+      "left": 5,
+      "targetExtensions": [
+        ".ts",
+        ".mp4"
+      ],
+      "resize": {
+        "width": 1024
+      }
+    }
+  ],
+  "defaultConfig": {
+    "exportPath": "D:/path/to/videos",
+    "row": 3,
+    "col": 3,
+    "top": 5,
+    "left": 5,
+    "resize": {
+      "width": 1024,
+      "height": 720
+    },
+    "targetExtensions": [
+      ".ts",
+      ".mp4"
+    ]
+  }
+}
