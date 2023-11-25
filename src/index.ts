@@ -33,6 +33,10 @@ async function main() {
 
       for (const videoName of videoNames) {
         const videoPath = join(videoDir, videoName)
+
+        const isLess10Mb = helper.isFileSizeLessThan(videoPath)
+        if (isLess10Mb) continue
+
         const { screenshotPaths, timeStamps } = await ffmpegHandler.countScreenshot(videoPath, totalNum, exportPath)
 
         const imgs = await imageHandler.addTimestampsToImg(screenshotPaths, timeStamps, { top, left })

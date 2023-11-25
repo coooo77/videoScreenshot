@@ -1,5 +1,6 @@
 'use strict'
 
+import fs from 'fs'
 import path from 'path'
 import * as url from 'url'
 import promiseFs from 'fs/promises'
@@ -33,5 +34,15 @@ export default {
       col: 3,
       targetExtensions: ['.ts', '.mp4'],
     }
+  },
+
+  isFileSizeLessThan(filePath: string, minSize: number = 10) {
+    if (!fs.existsSync(filePath)) return
+
+    const { size } = fs.statSync(filePath)
+
+    const sizeInMegaBytes = size / (1024 * 1024)
+
+    return sizeInMegaBytes < minSize
   },
 }
